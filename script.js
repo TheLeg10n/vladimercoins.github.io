@@ -29,3 +29,19 @@ function animateCoin() {
         coin.classList.remove('animate');
     }, 500);
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Получаем элемент монетки
+    var coin = document.getElementById('coin');
+
+    // Добавляем обработчик события клика
+    coin.addEventListener('click', function () {
+        // Добавляем класс анимации
+        coin.classList.add('animate');
+
+        // Задержка перед удалением класса анимации, чтобы можно было снова кликнуть
+        setTimeout(function () {
+            coin.classList.remove('animate');
+        }, 500); // 0.5 секунды - время анимации
+    });
+});
