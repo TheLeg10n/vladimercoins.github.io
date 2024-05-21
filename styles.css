@@ -1,0 +1,44 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #2c3e50, #34495e); /* Градиентный фон */
+}
+
+.container {
+    text-align: center;
+}
+
+.coin {
+    width: 200px;
+    cursor: pointer;
+}
+
+#balance {
+    font-size: 72px; /* Увеличиваем размер шрифта */
+    color: white; /* Белый цвет шрифта */
+    position: absolute; /* Позиционируем над картинкой */
+    top: 120px; /* Отступ от верхнего края */
+    left: 50%; /* Выравниваем по центру */
+    transform: translateX(-50%); /* Корректируем положение */
+}
+
+/* Анимация монетки */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.animate {
+    animation: rotate 0.5s linear;
+}
+
+.progress-bar {
+    background-color: #6c757d; /* Цвет фона прогресс-бара */
+}
